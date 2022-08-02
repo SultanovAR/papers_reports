@@ -1,7 +1,7 @@
 # Introduction
 
 Hi,
-Here i publish reports about papers that i've read.
+Here i publish reports about papers that i've read. Now all reports in **reports.md** file.
 
 Papers is not new or important, but it's attracted me somehow.
 

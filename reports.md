@@ -3,7 +3,7 @@
   - [Identity Mappings in Deep Residual Networks, 2016 <a name="#https://arxiv.org/pdf/1603.05027.pdf"></a>](#identity-mappings-in-deep-residual-networks-2016-)
       - [What](#what)
       - [How](#how)
-  - [Another paper <a name="paragraph2"></a>](#another-paper-)
+  - [<a name="paragraph2"></a>](#)
       - [What](#what-1)
       - [How](#how-1)
 
@@ -20,10 +20,12 @@
     Several aproaches were tested: gating, 1x1 convolutions, dropout, etc.
     
     BN + ReLU are considered as pre-activations, the output of the residual block should be in $$(-\infty, \infty)$$.  
-    And this leads to reducing overfitting because weight layers gets normalized(???) features.  
+    And this leads to reducing overfitting because weight layers get normalized(???) features.  
     (I don't understand the logic of this conclusion, but there are experiments that show the phenomena)
 
-## Another paper <a name="paragraph2"></a>
+    ![The proposed architecture](images/resnet_with_identity_mapping.png)
+
+##  <a name="paragraph2"></a>
 
 #### What
 #### How

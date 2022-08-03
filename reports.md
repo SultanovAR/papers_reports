@@ -42,24 +42,33 @@
 
 ### How
 
-    They condacted several lesion studies, which show that ResNet can be considered as an ensemble of several shallow NN with  
-    a depth ~10
+    They condacted several lesion studies, which show that ResNet can be considered as an ensemble of several  
+    shallow NN with a depth ~10
 
-    In the first experiment, authors deleted one residual-block and computed score on the test dataset. The results show only downsampling layers are critical, other layers but be removed without significant deterioration of the network quality
+    In the first experiment, authors deleted one residual-block and computed score on the test dataset.  
+    The results show only downsampling layers are critical, other layers but be removed without significant  
+    deterioration of the network quality
 
 <p align="center">
   <img align="center" src="images/unraveled_exp1.PNG" width="500"/>
 </p>
 
-    In the second experiment, authors removed several residual-blocks. The result confrims that ResNet can be viewed as ensemble  
-    of NN
+    In the second experiment, authors removed several residual-blocks. The result confrims that ResNet  
+    can be viewed as ensemble of NN
 
 <p align="center">
   <img align="center" src="images/unraveled_exp2.PNG" width="250"/>
 </p>
 
-    In the third experiment, magnitude of gradient on a path of length k was analyzed. They did following to count magnitude: they took pretrained ResNet54, feed a batch forward throught the whole network, then k layers were sampled and for its gradient flowed only throught residual-blocks, for others (54 - k) layers gradient flowed only throught skip-connections. Thus, they only measure gradients that flow through the single path of length k. The results show that the gradient magnitude of a path decreases exponentially with the number of modules it went through in the backward pass. Total gradient magnitude was computed in this way:  
-    Total gradient magnitude of len k = |layers of len k| * expected magnitude of gradient on len k. So effective paths have len between 7 an 14. Experiment where they trained the network updating only 24 layers per batch, confirms conclusion about the length effective paths.
+    In the third experiment, magnitude of gradient on a path of length k was analyzed. They did following  
+    to count magnitude: they took pretrained ResNet54, feed a batch forward throught the whole network, then  
+    k layers were sampled and for its gradient flowed only throught residual-blocks, for others (54 - k) layers  
+    gradient flowed only throught skip-connections. Thus, they only measure gradients that flow through the single  
+    path of length k. The results show that the gradient magnitude of a path decreases exponentially with the  
+    number of modules it went through in the backward pass. Total gradient magnitude was computed in this way:  
+    Total gradient magnitude of len k = |layers of len k| * expected magnitude of gradient on len k.  
+    So effective paths have len between 7 an 14. Experiment where they trained the network updating only 24  
+    layers per batch, confirms conclusion about the length effective paths.
 
 <p align="center">
   <img align="center" src="images/unraveled_exp3.PNG" width="550"/>
